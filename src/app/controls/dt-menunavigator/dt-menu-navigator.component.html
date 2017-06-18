@@ -1,0 +1,8 @@
+<div *ngFor="let item of menuItems; let index = index;" class="dt-menu-nav-item">
+  <dt-toggle-button class="dt-menu-nav-item" [selected]="item.selected" (click)="select(item);" [label]="item.name" [opened]="isOpened(item)" [sliding]="!item.isSub && (item.childrenData != null ? item.childrenData.length > 0 : false)"></dt-toggle-button>
+  <div class="dt-menu-nav__toggle-panel">
+    <dt-toggle-panel *ngIf="!item.isSub && (item.childrenData != null ? item.childrenData.length > 0 : false)" [selected]="isOpened(item)">
+      <dt-menu-navigator [index]="index" [provider]="provider" [parentItem]="item" [active]="item.selected" [data]="item.childrenData" (changeItem)="onChangeSub($event)"></dt-menu-navigator>
+    </dt-toggle-panel>
+  </div>
+</div>

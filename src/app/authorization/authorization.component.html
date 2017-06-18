@@ -1,0 +1,7 @@
+<dt-tabbar [data]="tabbarItems" (changeItem)="tabbar_change($event);" [tabIndex]="tabIndex"></dt-tabbar>
+
+<div id="auth-viewport" (window:resize)="onResize($event)">
+  <router-outlet></router-outlet>
+</div>
+<div style="position:absolute"></div>
+<dialog-outlet></dialog-outlet>

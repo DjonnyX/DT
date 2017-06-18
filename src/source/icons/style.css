@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ll99pi');
+  src:  url('fonts/icomoon.eot?ll99pi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ll99pi') format('truetype'),
+    url('fonts/icomoon.woff?ll99pi') format('woff'),
+    url('fonts/icomoon.svg?ll99pi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add_shopping_cart:before {
+  content: "\e854";
+}
+.icon-adjust:before {
+  content: "\e39e";
+}
+.icon-navigate_before:before {
+  content: "\e408";
+}
+.icon-navigate_next:before {
+  content: "\e409";
+}
+.icon-exit_to_app:before {
+  content: "\e879";
+}
+.icon-expand_less:before {
+  content: "\e5ce";
+}
+.icon-expand_more:before {
+  content: "\e5cf";
+}
+.icon-shopping_cart:before {
+  content: "\e8cc";
+}
+.icon-menu:before {
+  content: "\e5d2";
+}
+.icon-system_update_alt:before {
+  content: "\e8d7";
+}

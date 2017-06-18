@@ -1,0 +1,19 @@
+.dt-menu-nav-item {
+  width:100%;
+}
+
+dt-menu-navigator.sub {
+  div.dt-menu-nav-item {
+    box-sizing: border-box;
+    border-left: 5px solid #000;
+    text-align: left;
+    width:100%;
+    text-transform: lowercase;
+    height:56px;
+  }
+}
+
+.dt-menu-nav__toggle-panel {
+  overflow:hidden;
+  height:100%;
+}

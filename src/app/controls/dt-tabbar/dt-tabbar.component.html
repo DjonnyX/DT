@@ -1,0 +1,7 @@
+<div class="dt-tabbar__container">
+  <div class="dt-tabbar__list">
+    <button *ngFor="let item of items; let index = index;" [ngClass]="item.classes" [ngStyle]="styleWidth" (click)="select(item)" [mdl-colored]="item.selected ? 'accent' : 'primary'" mdl-button mdl-ripple>
+      {{item.name}}
+    </button>
+  </div>
+</div>

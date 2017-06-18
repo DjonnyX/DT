@@ -1,0 +1,7 @@
+<dt-tabbar [data]="tabbarItems" (changeItem)="tabbar_change($event);" [tabIndex]="tabIndex"></dt-tabbar>
+<div id="dt-modules-canvas">
+  <div id="dt-modules-container" class="dt-modules__list">
+    <dt-module-card [id]="'dt-module-card-' + index" [hidden]="!item.bought && onlyBought" class="dt-module-card" *ngFor="let item of moduleList; let index = index;" (window:resize)="onResize($event)" title="DealTo" (click)="onSelect(item)" [data]="item" [ngStyle]="style"></dt-module-card>
+  </div>
+</div>
+<router-outlet></router-outlet>

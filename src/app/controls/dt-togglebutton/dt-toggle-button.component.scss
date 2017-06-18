@@ -1,0 +1,29 @@
+.dt-toggle-button {
+  width:100%;
+  background-color: #ffffff;
+  height:56px;
+  text-transform: lowercase;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: normal;
+  border-radius: 0px;
+  border-bottom: 1px solid #eeeeee;
+  text-align: left;
+}
+
+button {
+  display:flex;
+  align-items: center;
+  font-size: 17px !important;
+}
+
+button {
+  div.dt-toggle_button__icon {
+    margin-left: auto;
+  }
+}
+
+.dt-toggle-button.selected {
+  background-color: #ffde00 !important;
+  border-bottom: 1px solid rgb(236, 205, 0) !important;
+}

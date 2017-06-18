@@ -1,0 +1,49 @@
+.mdl-button {
+  background-color: #fff;
+  padding: 0px;
+  line-height: inherit !important;
+  height: inherit;
+  width:100%;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid #fff;
+}
+
+.mdl-button--primary.mdl-button--primary .mdl-ripple {
+  background-color: rgb(210, 210, 210);
+}
+
+.dt-list-item__container {
+  margin: 0px 10px 10px 10px;
+}
+
+.dt-list-item__container:hover {
+  box-shadow: 0px 1px 19px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dt-list-item__name {
+  font-family: RobotoRegular;
+  text-transform: lowercase;
+  font-size: 15px !important;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: normal;
+  text-align: left;
+}
+
+.dt-list-item__address {
+  font-family: RobotoLight;
+  text-transform: lowercase !important;
+  font-size: 15px !important;
+  text-align: left;
+}
+
+.dt-list-item__content {
+  padding: 10px;
+  border-left: 5px solid #f3f3f3;
+}
+
+.dt-list-item__icon {
+  position: absolute;
+  margin: -30px 0 0 170px;
+  font-size: 24px !important;
+}

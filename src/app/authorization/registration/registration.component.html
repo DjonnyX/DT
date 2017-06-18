@@ -1,0 +1,97 @@
+<div class="content-box">
+  <div class="title-box">
+    <div class="attr-group-container">
+      <div class="attr-group">
+        <h4 class="dt-title txt-centred">
+          Регистрация
+        </h4>
+        <p class="dt-title ds-title-description txt-centred">
+          На данный момент регистрация на сервисе DealTo доступна только для клиентов системы EVATOR
+        </p>
+        <div style="padding:4px;"> </div>
+        <div class="hidden-group">
+          <dt-toggle-panel [selected]="sended != 1">
+            <form [formGroup]="form" autocomplete="on">
+              <mdl-textfield
+                formControlName="userName"
+                type="name"
+                name="username"
+                maxlength="15"
+                [pattern]="userName_validator"
+                label="имя пользователя"
+                placeholder="имя пользователя"
+                autocomplete="on"
+                autofocus></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="userName_isError">
+                  <div class="error_message">{{userName_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <mdl-textfield
+                formControlName="email"
+                type="email"
+                name="email"
+                label="e-mail"
+                [pattern]="email_validator"
+                placeholder="e-mail"
+                autocomplete="on"
+                autofocus></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="email_isError">
+                  <div class="error_message">{{email_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <mdl-textfield
+                formControlName="phone"
+                type="tel"
+                name="tel"
+                label="телефон"
+                maxlength="22"
+                [pattern]="phone_validator"
+                placeholder="телефон"
+                autofocus
+                autocomplete="on"></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="phone_isError">
+                  <div class="error_message">{{phone_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <mdl-textfield
+                formControlName="password"
+                type="password"
+                name="password"
+                label="пароль"
+                [pattern]="password_validator"
+                placeholder="пароль"
+                autofocus
+                autocomplete="off"></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="password_isError">
+                  <div class="error_message">{{password_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <mdl-textfield
+                formControlName="confirmPassword"
+                type="password"
+                label="подтвердите пароль"
+                placeholder="повторите пароль"
+                autofocus></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="confirmPassword_isError">
+                  <div class="error_message">{{confirmPassword_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <p class="dt-description">* Все поля обязательны для заполнения.</p>
+              <div style="padding:6px;"> </div>
+              <button class="send btn primary" mdl-colored="accent" mdl-button mdl-ripple (click)="registration();">
+                регистрация
+              </button>
+              <div style="padding:14px;"> </div>
+            </form>
+            </dt-toggle-panel>
+          </div>
+        <mdl-spinner single-color active *ngIf="sended == 1" [ngClass]="preloaderClass"></mdl-spinner>
+      </div>
+    </div>
+  </div>
+</div>

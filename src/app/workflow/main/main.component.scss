@@ -1,0 +1,14 @@
+h4 {
+ margin-top:0px !important;
+}
+
+@media screen and (min-width: 1025px) {
+  .main__content {
+    padding: 10px 40px 40px 40px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .main__content {
+    padding: 0px 40px 40px 40px;
+  }
+}

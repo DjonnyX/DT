@@ -1,0 +1,12 @@
+<div class="dt-list-item__container">
+  <button mdl-button mdl-ripple mdl-colored="primary">
+    <div *ngIf="name != null && name != ''" class="dt-list-item__content">
+      <div class="dt-list-item__name">
+        {{name}}
+      </div>
+      <div *ngIf="address != null && address != ''" class="dt-list-item__address">
+        {{address}}
+      </div>
+    </div>
+  </button>
+</div>

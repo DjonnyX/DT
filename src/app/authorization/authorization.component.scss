@@ -1,0 +1,25 @@
+dt-tabbar {
+  padding: 36px 20px 0 20px;
+}
+
+#auth-viewport {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+login {
+  flex-grow: .075;
+}
+
+registration {
+  flex-grow: .15;
+}
+
+.dt-toggle-panel {
+  .error_message {
+    font-size: 14px;
+    color: rgb(213,0,0);
+    text-align: center;
+  }
+}

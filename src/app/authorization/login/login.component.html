@@ -1,0 +1,49 @@
+<div class="content-box">
+  <div class="title-box">
+    <div class="attr-group-container">
+      <div class="attr-group">
+        <h4 class="dt-title txt-centred">
+          Вход
+        </h4>
+        <p class="dt-title ds-title-description txt-centred">
+          На данный момент вход на сервис DealTo доступен только для клиентов системы EVATOR
+        </p>
+        <div style="padding:4px;"> </div>
+        <div class="hidden-group">
+          <dt-toggle-panel [selected]="sended != 1">
+            <form id="loginForm" [formGroup]="form" autocomplete="on">
+              <mdl-textfield
+                formControlName="phone"
+                type="username"
+                name="username"
+                label="телефон"
+                maxlength="22"
+                [pattern]="phone_validator"
+                placeholder="телефон"
+                autofocus
+                autocomplete="on"></mdl-textfield>
+              <div style="overflow: hidden">
+                <dt-toggle-panel [selected]="phone_isError">
+                  <div class="error_message">{{phone_errorMessage}}</div>
+                </dt-toggle-panel>
+              </div>
+              <mdl-textfield
+                formControlName="password"
+                type="password"
+                name="password"
+                label="пароль"
+                placeholder="пароль"
+                autofocus
+                autocomplete="off"></mdl-textfield>
+              <button style="margin-top:10px;" class="send btn primary" mdl-colored="accent" mdl-button mdl-ripple (click)="login()">
+                вход
+              </button>
+              <div style="padding:14px;"> </div>
+            </form>
+          </dt-toggle-panel>
+          </div>
+        <mdl-spinner single-color active *ngIf="sended == 1" [ngClass]="preloaderClass"></mdl-spinner>
+      </div>
+    </div>
+  </div>
+</div>

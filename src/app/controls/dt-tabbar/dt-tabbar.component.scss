@@ -1,0 +1,49 @@
+.dt-tabbar__container {
+  position: relative;
+  padding: 4px 20px;;
+  display:flex;
+  justify-content: center;
+}
+
+.dt-tabbar__list {
+  max-width: 520px;
+  min-width: 220px;
+  width: 100%;
+  display: flex;
+  border-radius: 38px;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.mdl-button.dt-tabbar__button {
+  background-color: #ffffff;
+  height:42px;
+  text-transform: none;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.mdl-button.dt-tabbar__left-button {
+  border-radius: 38px 0px 0px 38px;
+}
+
+.dt-tabbar__left-button.selected {
+  background-color: #ffde00 !important;
+}
+
+.mdl-button.dt-tabbar__right-button {
+  border-radius: 0px 38px 38px 0px;
+}
+
+.dt-tabbar__right-button.selected {
+  background-color: #ffde00 !important;
+}
+
+.mdl-button.dt-tabbar__center-button {
+  border-radius: 0px;
+}
+
+.dt-tabbar__center-button.selected {
+  background-color: #ffde00 !important;
+}

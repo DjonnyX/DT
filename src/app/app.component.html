@@ -1,0 +1,36 @@
+<mdl-layout mdl-layout-fixed-header >
+  <mdl-layout-header class="mdl-layout--no-desktop-drawer-button">
+    <mdl-layout-header-row class="main-header">
+      <div class="dt-header__content">
+        <button [hidden]="!isLogged || !drawerLayout.isSmallScreen" class="icon-menu dt-menu-button" mdl-colored="accent" mdl-button mdl-ripple (click)="drawerLayout.toggleDrawer()">
+        </button>
+        <div class="app-header-logo" (click)="showMainPaige()">
+          <div class="app-header-logo-deal">Deal</div>
+          <div class="app-header-logo-to">To</div>
+        </div>
+      </div>
+      <button [hidden]="!isLogged" class="icon-exit_to_app dt-logout-button" mdl-colored="accent" mdl-button mdl-ripple (click)="drawerLayout.closeDrawer(); logout();">
+      </button>
+    </mdl-layout-header-row>
+  </mdl-layout-header>
+  <mdl-layout-content>
+    <mdl-layout [mdl-layout-fixed-drawer]="isLogged" mdl-layout-no-drawer-button #drawerLayout="mdlLayout">
+      <mdl-layout-drawer [hidden]="!isLogged">
+        <nav class="mdl-navigation">
+          <dt-menu-navigator *ngIf="isLogged" [provider]="menuNavigatorProvider"(changeItem)="menuNavigator_change($event, drawerLayout.isSmallScreen ? drawerLayout : null);" [data]="menuItems"></dt-menu-navigator>
+        </nav>
+      </mdl-layout-drawer>
+      <mdl-layout-content class="app-main-content">
+        <div class="main-content">
+          <div class="router-outlet">
+            <router-outlet></router-outlet>
+          </div>
+          <footer class="dt-footer">
+            <div class="dt-footer-txt">2017 DealTo</div>
+          </footer>
+        </div>
+        <dialog-outlet></dialog-outlet>
+      </mdl-layout-content>
+    </mdl-layout>
+  </mdl-layout-content>
+</mdl-layout>

@@ -1,0 +1,31 @@
+.dt-module-card {
+  /*margin: 10px;*/
+  transition: transform 2s linear 1s;
+  padding: 6px;
+}
+
+.dt-modules__list {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.dt-module-card__container {
+  width:200px;
+  height:200px;
+}
+
+.not-purchased {
+  background-color: #848484;
+}
+
+.bought {
+  background-color: #fff;
+}
+
+dt-tabbar {
+  padding: 0px 20px 0 20px;
+}

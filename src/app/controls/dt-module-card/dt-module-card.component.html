@@ -1,0 +1,16 @@
+<div class="dt-module-card__container">
+  <button mdl-button mdl-ripple mdl-colored="primary" [ngClass]="bought ? 'bought' : 'not-purchased'">
+    <div class="dt-module-card__content">
+      <div class="dt-module-card__title">
+        {{title}}
+      </div>
+      <div class="dt-module-card__name">
+        {{name}}
+      </div>
+      <div class="dt-module-card__description">
+        {{description}}
+      </div>
+    </div>
+  </button>
+  <div class="dt-modules-card__icon" [ngClass]="bought ? 'icon-navigate_next' : 'icon-add_shopping_cart'"></div>
+</div>

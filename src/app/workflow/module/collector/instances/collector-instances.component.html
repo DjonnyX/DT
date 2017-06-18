@@ -1,0 +1,18 @@
+<div class="module__content">
+  <!--<dt-rest-item *ngFor="let item of instances; let index = index;" [data]="item"></dt-rest-item>-->
+</div>
+
+<dt-list-item *ngFor="let item of instances; let index = index;">
+  <form [formGroup]="form">
+    <label>{{item.name}}</label>
+    <mdl-select formControlName="rests" >
+      <mdl-option *ngFor="let cash of item.cashes" [value]="cash">{{cash}}</mdl-option>
+    </mdl-select>
+    <mdl-select formControlName="personId" multiple="true" >
+      <mdl-option *ngFor="let cash of item.cashes" [value]="cash">{{cash}}</mdl-option>
+    </mdl-select>
+    <mdl-select formControlName="personId" multiple="true" >
+      <mdl-option *ngFor="let cash of item.cashes" [value]="cash">{{cash}}</mdl-option>
+    </mdl-select>
+  </form>
+</dt-list-item>
